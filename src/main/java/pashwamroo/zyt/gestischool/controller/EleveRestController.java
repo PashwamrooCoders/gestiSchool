@@ -75,11 +75,11 @@ public class EleveRestController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-	
+
 	// Mettre à jour un eleve
 	@PutMapping("/eleves/{id}")
-	public ResponseEntity<Eleve> mettreAjourUnEleve(@PathVariable("id") long id, @RequestBody EleveRepresentation eleveRep) {
-		//Optional<Eleve> eleveData = eleveDao.findById(id);
+	public ResponseEntity<Eleve> mettreAjourUnEleve(@PathVariable("id") long id,
+			@RequestBody EleveRepresentation eleveRep) {
 		try {
 			Eleve eleveCourant = eleveDao.findById(id).orElseThrow(RuntimeException::new);
 			eleveCourant.setNom(eleveRep.getNom());
@@ -88,26 +88,23 @@ public class EleveRestController {
 			eleveCourant.setDateNaissance(eleveRep.getDateNaissance());
 			eleveCourant.setUrlImage(eleveRep.getUrlImage());
 			eleveCourant = eleveService.creerEleve(eleveRep);
-			
+
 			return new ResponseEntity<>(eleveCourant, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-	
-	
+
 	@DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> supprimerUnEleve(@PathVariable("id") Long id) {
-		
+	public ResponseEntity<HttpStatus> supprimerUnEleve(@PathVariable("id") Long id) {
+
 		try {
 			eleveService.supprimerUnEleve(id);
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} catch (Exception e) {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		
-    }
-		
-	
-	
+
+	}
+
 }
