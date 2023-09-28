@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Data
-
+@Table(name = "T_Eleve")
 public class Eleve {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +26,6 @@ public class Eleve {
     @OneToMany(mappedBy = "eleve")
     private List<Note> notes;
 
-    @OneToMany(mappedBy = "matiere")
-    private Matiere matiere;
 
     public String getNom() {
         return nom;
