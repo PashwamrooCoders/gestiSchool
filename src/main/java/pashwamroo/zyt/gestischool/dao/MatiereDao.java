@@ -1,2 +1,4 @@
-package pashwamroo.zyt.gestischool.dao;public interface MatiereDao {
+package pashwamroo.zyt.gestischool.dao;
+
+public interface MatiereDao {
 }
