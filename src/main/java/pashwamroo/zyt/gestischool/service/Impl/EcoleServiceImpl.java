@@ -5,40 +5,40 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import pashwamroo.zyt.gestischool.dto.MatiereRepresentation;
-import pashwamroo.zyt.gestischool.entity.Matiere;
-import pashwamroo.zyt.gestischool.service.MatiereService;
+import pashwamroo.zyt.gestischool.dto.EcoleRepresentation;
+import pashwamroo.zyt.gestischool.entity.Ecole;
+import pashwamroo.zyt.gestischool.service.EcoleService;
 
 @Service
 @Transactional
-public class MatiereServiceImpl implements MatiereService {
+public class EcoleServiceImpl implements EcoleService {
 
 	@Override
-	public List<Matiere> toutesLesMatieres() {
+	public List<Ecole> toutesLesEcoles() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Matiere obtenirUneMatiereParId(Long id) {
+	public Ecole obtenirUnEcoleParId(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Matiere creerUneMatiere(MatiereRepresentation matiereRep) {
+	public Ecole creerUneEcole(EcoleRepresentation ecoleRep) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Matiere mettreAJourUneMatiere(Long id) {
+	public Ecole mettreAJourUnEcole(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Matiere supprimerUneMatiere(Long id) {
+	public Ecole supprimerUneEcole(Long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
