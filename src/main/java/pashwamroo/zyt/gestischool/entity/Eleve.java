@@ -19,6 +19,7 @@ public class Eleve {
     private String email;
     private Date dateNaissance;
     private String urlImage;
+    
     @ManyToOne
     @JoinColumn(name = "classe_id")
     private Classe classe;

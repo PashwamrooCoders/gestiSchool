@@ -20,6 +20,7 @@ public class BulletinRestController {
 
     @GetMapping("/{eleveId}")
     public Bulletin generateBulletin(@PathVariable Long eleveId) throws EleveNotFoundException {
-        return bulletinService.generateBulletin(eleveId);
+        return null; 
+        //bulletinService.genererLeBulletinDUnEleve(eleveId); 
     }
 }

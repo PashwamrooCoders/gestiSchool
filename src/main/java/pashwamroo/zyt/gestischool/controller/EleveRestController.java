@@ -70,7 +70,7 @@ public class EleveRestController {
 		try {
 			Eleve nouvelEleve = new Eleve();
 			if (!eleveDao.existsById(eleveRep.getId())) {
-				nouvelEleve = eleveService.creerEleve(eleveRep);
+				nouvelEleve = eleveService.creerUnEleve(eleveRep);
 			}
 			return new ResponseEntity<>(nouvelEleve, HttpStatus.OK);
 		} catch (Exception e) {
@@ -89,7 +89,7 @@ public class EleveRestController {
 			eleveCourant.setEmail(eleveRep.getEmail());
 			eleveCourant.setDateNaissance(eleveRep.getDateNaissance());
 			eleveCourant.setUrlImage(eleveRep.getUrlImage());
-			eleveCourant = eleveService.creerEleve(eleveRep);
+			eleveCourant = eleveService.creerUnEleve(eleveRep);
 
 			return new ResponseEntity<>(eleveCourant, HttpStatus.CREATED);
 		} catch (Exception e) {

@@ -20,6 +20,10 @@ public class Classe {
 
     @OneToMany(mappedBy = "classe")
     private List<Bulletin> bulletins;
+    
+    @ManyToOne
+    @JoinColumn(name="ecole_id")
+    private Ecole ecole;
 
     public String getNom() {
         return nom;
