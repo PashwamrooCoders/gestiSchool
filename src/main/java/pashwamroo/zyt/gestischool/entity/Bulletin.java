@@ -21,7 +21,7 @@ public class Bulletin {
 	@ManyToOne
 	@JoinColumn(name = "eleve_id")
 	private Eleve eleve;
-	@OneToMany
+	@OneToMany(mappedBy = "bulletin")
 	private List<Note> notes;
 
 	@ManyToOne

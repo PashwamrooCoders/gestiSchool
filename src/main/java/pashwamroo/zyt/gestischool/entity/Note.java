@@ -26,6 +26,10 @@ public class Note {
 	@ManyToOne
 	@JoinColumn(name = "matiere_id")
 	private Matiere matiere;
+	
+	@ManyToOne
+	@JoinColumn(name = "bulletin_id")
+	private Bulletin bulletin;
 
 	public double getValeur() {
 		return valeur;
