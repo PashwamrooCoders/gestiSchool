@@ -9,24 +9,24 @@ import java.util.List;
 @Data
 public class Matiere {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String libelle;
+	private Integer coefficient;
 
-    private String nom;
+	@ManyToOne
+	@JoinColumn(name = "bulletin_id")
+	private Bulletin bulletin;
 
-    @ManyToOne
-    @JoinColumn(name = "bulletin_id")
-    private Bulletin bulletin;
+	@OneToMany(mappedBy = "matiere")
+	private List<Note> notes;
 
-    @OneToMany(mappedBy = "matiere")
-    private List<Note> notes;
+	public Bulletin getBulletin() {
+		return bulletin;
+	}
 
-    public Bulletin getBulletin() {
-        return bulletin;
-    }
-
-    public void setBulletin(Bulletin bulletin) {
-        this.bulletin = bulletin;
-    }
+	public void setBulletin(Bulletin bulletin) {
+		this.bulletin = bulletin;
+	}
 }

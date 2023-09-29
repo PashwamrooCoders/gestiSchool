@@ -49,8 +49,9 @@ public class EleveBuilder {
 		return urlImage;
 	}
 
-	public void setId(Long id) {
+	public EleveBuilder withId(Long id) {
 		this.id = id;
+		return this;
 	}
 
 	public EleveBuilder withNom(String nom) {

@@ -15,6 +15,8 @@ public class Bulletin {
 	private Long id;
 	private double moyenne;
 	private String decision;
+	private String numeroTrimestre;
+	private String anneeScolaire;
 
 	@ManyToOne
 	@JoinColumn(name = "eleve_id")

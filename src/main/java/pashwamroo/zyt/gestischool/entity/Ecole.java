@@ -13,6 +13,7 @@ public class Ecole {
 
     private String nom;
     private String devise;
+    private String urlLogo;
 
     public String getNom() {
         return nom;

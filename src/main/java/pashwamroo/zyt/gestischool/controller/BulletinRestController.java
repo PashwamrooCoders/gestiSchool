@@ -10,11 +10,11 @@ import pashwamroo.zyt.gestischool.service.BulletinService;
 
 @RestController
 @RequestMapping("/api/bulletin")
-public class BulletinController {
+public class BulletinRestController {
 
     private final BulletinService bulletinService;
 
-    public BulletinController(BulletinService bulletinService) {
+    public BulletinRestController(BulletinService bulletinService) {
         this.bulletinService = bulletinService;
     }
 
